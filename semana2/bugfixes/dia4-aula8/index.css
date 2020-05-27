@@ -46,6 +46,14 @@ div>p:first-child {
 
 }
 
+td button:hover{
+    background-color:#9b893a; 
+}
+
+td button:active{
+    color: white;
+}
+
 .botao-amarelo:hover {
     background-color: #c44f00;
 }
