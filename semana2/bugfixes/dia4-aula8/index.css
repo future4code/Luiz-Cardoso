@@ -46,6 +46,7 @@ div img {
     color: white;
     position: absolute;
     left: 700px;
+    top: 850px;
 
 }
 
@@ -72,6 +73,7 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    padding-top: 200px;
 }
 
 #container-de-descricao>ol {
