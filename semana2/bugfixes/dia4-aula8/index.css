@@ -21,8 +21,13 @@ button{
     outline: none;
 }
 
-
 a{
+    text-decoration: none;
+    color: black;
+}
+
+a:active{
+    color: white;
     text-decoration: none;
 }
 
@@ -42,6 +47,13 @@ img {
     width: 50px;
 }
 
+img:hover{
+    opacity: 50%;
+}
+
+img:active{
+    opacity: 100%;
+}
 
 .botao-amarelo {
     background-color: #ffaf43;
@@ -128,7 +140,7 @@ td button {
     width: 150px;
     height: 30px;
     border-radius: 5px;
-    color: black;
+    color: red;
 }
 
 .container-do-search {
@@ -146,7 +158,6 @@ td button {
     font-size: 10px;
     color: black;
     display: inline;
-
 }
 
 #div-button{
