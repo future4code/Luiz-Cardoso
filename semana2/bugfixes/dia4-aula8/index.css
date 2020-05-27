@@ -46,7 +46,7 @@ div img {
     color: white;
     position: absolute;
     left: 700px;
-    top: 850px;
+    top: 100px;
 
 }
 
@@ -82,13 +82,13 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
+    position: relative;
 }
 
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
-    position: relative;
 }
 
 
@@ -104,7 +104,8 @@ div:last-child {
 }
 
 table {
-    width: 60%;
+    width: 100%;
+    text-align: center;
 }
 
 td button {
