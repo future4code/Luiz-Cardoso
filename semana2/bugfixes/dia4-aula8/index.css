@@ -17,11 +17,21 @@ h2 {
     text-align: center;
 }
 
+button{
+    outline: none;
+}
+
+
+a{
+    text-decoration: none;
+}
+
 input {
     height: 20px;
     width: 500px;
     border: none;
     border-bottom: black 2px solid;
+    outline: none;
 }
 
 button:focus {
@@ -32,9 +42,6 @@ img {
     width: 50px;
 }
 
-div>p:first-child {
-    display: inline;
-}
 
 .botao-amarelo {
     background-color: #ffaf43;
@@ -43,10 +50,6 @@ div>p:first-child {
     border-radius: 5px;
     font-size: 20px;
     color: white;
-    position: absolute;
-    left: 700px;
-    top: 100px;
-
 }
 
 td button:hover{
@@ -115,6 +118,8 @@ div:last-child {
 table {
     margin: 0 auto;
     text-align: center;
+    width: 40%;
+    font-weight: bold;
 }
 
 
