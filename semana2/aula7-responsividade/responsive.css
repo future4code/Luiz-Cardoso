@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    text-align: center;
+}
+div{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+.menu{
+    background-color: darkgray;
+    grid-column: 1/1;
+    grid-row: 1/17;
+}
+
+.parte-vermelha{
+    background-color: red;
+    height: 50px;
+    grid-row: 1/2;
+    grid-column: 2/11;
+    margin-bottom: 10px;
+}
+
+.item1{
+    background-color: blue;
+    border: 1px solid black;
+    grid-row: 2/5;
+    grid-column: 2/5;
+    margin: 15px 15px 15px 15px;
+}
+
+.item2{
+    background-color: yellow;
+    border: 1px solid black;
+    grid-row: 2/5;
+    grid-column: 5/8;
+    margin: 15px 15px 15px 15px;
+}
+
+.item3{
+    background-color: green;
+    border: 1px solid black;
+    grid-row: 2/5;
+    grid-column: 8/11;
+    margin: 15px 15px 15px 15px;
+}
+
+.item4{
+    background-color: blue;
+    border: 1px solid black;
+    grid-row: 5/8;
+    grid-column: 2/5;
+    margin: 15px 15px 15px 15px;
+}
+
+.item5{
+    background-color: yellow;
+    border: 1px solid black;
+    grid-row: 5/8;
+    grid-column: 5/8;
+    margin: 15px 15px 15px 15px;
+}
+
+.item6{
+    background-color: green;
+    border: 1px solid black;
+    grid-row: 5/8;
+    grid-column: 8/11;
+    margin: 15px 15px 15px 15px;
+}
+
+.item7{
+    background-color: black;
+    border: 1px solid black;
+    grid-row: 8/14;
+    grid-column: 2/6;
+    margin: 15px 0px 0px 15px;
+    margin-right: -50px;
+    color: white;
+    font-weight: bold;
+}
+
+.item8{
+    background-color: black;
+    border: 1px solid black;
+    grid-row: 8/14;
+    grid-column: 7/11;
+    margin: 15px 15px 0px 0px;
+    margin-left: -50px;
+    color: white;
+    font-weight: bold;
+}
+
+.item9{
+    background-color: white;
+    border: 1px solid black;
+    grid-row: 14/17;
+    grid-column: 2/5;
+    margin: 15px 15px 15px 15px;
+}
+
+.item10{
+    background-color: white;
+    border: 1px solid black;
+    grid-row: 14/17;
+    grid-column: 5/8;
+    margin: 15px 15px 15px 15px;
+}
+
+.item11{
+    background-color: white;
+    border: 1px solid black;
+    grid-row: 14/17;
+    grid-column: 8/11;
+    margin: 15px 15px 15px 15px;
+}
