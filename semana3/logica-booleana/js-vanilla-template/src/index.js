@@ -82,7 +82,7 @@ kelvin = (celsius + 273.15)
 console.log("celsius pra k "+ kelvin)
 
 rc = prompt ("Qual valor de Celsius")
-kelvin = (rc + 273.15)
+kelvin = parseInt (rc) + 273.15
 console.log(kelvin)
 
 
@@ -104,12 +104,12 @@ const marca = prompt ("qual sua marca favorita")
 console.log("Resposta "+ marca)
 
 // exercício 3
-let watts = prompt ("Quantos quilowatts sua residencia consome")
+let watts = 280
 let questao = (watts*0.05)
 console.log("Sua energia custa " + questao + " reais a hora")
 
 
-let desconto = prompt ("Qual valor de desconto")
+let desconto = 15
 let seila = (questao*desconto/100)
 let seila2 = questao - seila
 console.log("Valor a ser pago " + seila2)
