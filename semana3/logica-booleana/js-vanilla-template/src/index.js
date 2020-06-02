@@ -62,13 +62,54 @@ console.log('VII. ', resultadoC)
 
     */
 
-    // exercicio 3 
-// F PARA K
-let kelvin;
-kelvin = (77 - 32)*5/9 + 273.15
-console.log("temperatura de F para K" + " "+  kelvin + "ºK" )
+// exercicio 3
 
-//C PARA F
-let f;
-f = (80)*9/5 + 32
-console.log("temperatura de C para F" + " " + f + "ºF")
+let celsius = 80 
+let kelvin;
+let farenheit = 77
+
+kelvin = (farenheit - 32)*5/9 + 273.15
+console.log ("temperatura em Kelvin " + kelvin)
+
+farenheit = (celsius)*9/5 + 32
+console.log("temperatura em f " + farenheit)
+
+celsius = 30
+farenheit = (celsius)*9/5 + 32
+console.log("c para f " + farenheit)
+
+kelvin = (celsius + 273.15)
+console.log("celsius pra k "+ kelvin)
+
+rc = prompt ("Qual valor de Celsius")
+kelvin = (rc + 273.15)
+console.log(kelvin)
+
+
+// exercicio 4
+
+const endereço = prompt ("qual seu endereço?")
+console.log("Resposta " + endereço)
+
+const cor = prompt ("qual sua cor favorita")
+console.log("Resposta " + cor)
+
+const carro = prompt ("qual carro dos seus sonhos")
+console.log("Resposta " + carro)
+
+const hobbie = prompt ("qual seu hobbie favorito")
+console.log("Resposta " + hobbie)
+
+const marca = prompt ("qual sua marca favorita")
+console.log("Resposta "+ marca)
+
+// exercício 3
+let watts = prompt ("Quantos quilowatts sua residencia consome")
+let questao = (watts*0.05)
+console.log("Sua energia custa " + questao + " reais a hora")
+
+
+let desconto = prompt ("Qual valor de desconto")
+let seila = (questao*desconto/100)
+let seila2 = questao - seila
+console.log("Valor a ser pago " + seila2)
