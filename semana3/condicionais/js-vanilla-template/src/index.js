@@ -119,19 +119,53 @@
 
 
 //exercicio 5
-let animal = prompt("Digite o nome do animal")
-let espinha = prompt("Esse animal é vertebrado?")
-switch (espinha){
-    case "sim":
-        let mamifero = prompt("Esse animal é um mamifero?")
-            switch (mamifero){
-                case "sim":
-                    let tipo = prompt("Esse animal é humano?")
-                    break
-                    case "não":
-                    switch (pelo){
-                        case "sim":
-                            let 
-                    }
+// let animal = prompt("Digite o nome do animal")
+// let espinha = prompt("Esse animal é vertebrado?")
+// switch (espinha){
+//     case "sim":
+//         let mamifero = prompt("Esse animal é um mamifero?")
+//             switch (mamifero){
+//                 case "sim":
+//                     let tipo = prompt("Esse animal é humano?")
+//                     break
+//                     case "não":
+
+//                     switch (pelo){
+//                         case "sim":
+//                             let 
+//                     }
+//             }
+// }
+
+const pernas = ""
+const terrestre = ""
+const vive = ""
+
+const animal = prompt("Informe o nome do anial")
+const vertebrado = prompt("O animal possui ossos?")
+
+if(vertebrado === "sim"){
+    const mamifero = prompt("O animal possui pelos?")
+    if(mamifero === "sim"){
+        const racional = prompt ("O animal é racional?")
+        if (racional === "sim"){
+            console.log("O animal" + animal + " É um ser humano")
+        }else {
+            console.log("O animal" + animal " um mamifero não humano")
+        }
+    }else{
+        const penas = prompt("O animal possui penas?")
+        if(penas = "sim"){
+            console.log("O animal" + animal " é uma ave")
+        }
+    }else{
+        const terrestre = prompt("O animal é terrestre?")
+        if(terrestre = "sim"){
+           const vive = prompt("Passa a maior parte do tempo na agua?")
+           if(vive === "sim"){
+               console.log("O animal" + animal + "é anfíbio")
             }
+            }else{
+                console.log("O animal" + animal + "é um peixe")
+        }
 }
