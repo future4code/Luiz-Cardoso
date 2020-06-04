@@ -137,41 +137,114 @@
 //             }
 // }
 
-const penas = ""
-const terrestre = ""
-const vive = ""
+// const penas = ""
+// const terrestre = ""
+// const vive = ""
 
-const animal = prompt("Informe o nome do animal")
-const vertebrado = prompt("O animal possui ossos?")
+// const animal = prompt("Informe o nome do animal")
+// const vertebrado = prompt("O animal possui ossos?")
 
-if(vertebrado === "sim"){
-    const mamifero = prompt("O animal possui pelos?")
-    if(mamifero === "sim"){
-        const racional = prompt ("O animal é racional?")
-        if (racional === "sim"){
-            console.log("O animal " + animal + " É um ser humano")
-        }else {
-            console.log("O animal " + animal + " um mamifero não humano")
-        }
-    }else {
-        const penas = prompt("O animal possui penas?")
-        if(penas === "sim"){
-        console.log("O animal " + animal + " é uma ave")
-        }else{
-        const terrestre = prompt("O animal é terrestre?")
-            if(terrestre === "sim"){
-                const vive = prompt("Passa a maior parte do tempo na agua?")
-                if(vive === "sim"){
-                    console.log("O animal " + animal + " é anfíbio")
-                }else{
-                    console.log("O animal " + animal + " é um réptil")
-                }
-            }else {
-                console.log("O animal " + animal + " é um peixe")
-            }
-        }
-    }
-}
-else{
-    console.log("O animal" + animal + " é um invertebrado")
+// if(vertebrado === "sim"){
+//     const mamifero = prompt("O animal possui pelos?")
+//     if(mamifero === "sim"){
+//         const racional = prompt ("O animal é racional?")
+//         if (racional === "sim"){
+//             console.log("O animal " + animal + " É um ser humano")
+//         }else {
+//             console.log("O animal " + animal + " um mamifero não humano")
+//         }
+//     }else {
+//         const penas = prompt("O animal possui penas?")
+//         if(penas === "sim"){
+//         console.log("O animal " + animal + " é uma ave")
+//         }else{
+//         const terrestre = prompt("O animal é terrestre?")
+//             if(terrestre === "sim"){
+//                 const vive = prompt("Passa a maior parte do tempo na agua?")
+//                 if(vive === "sim"){
+//                     console.log("O animal " + animal + " é anfíbio")
+//                 }else{
+//                     console.log("O animal " + animal + " é um réptil")
+//                 }
+//             }else {
+//                 console.log("O animal " + animal + " é um peixe")
+//             }
+//         }
+//     }
+// }
+// else{
+//     console.log("O animal" + animal + " é um invertebrado")
+// }
+
+
+// exercícios aula 11
+
+// let sum = 0
+// for(let i = 0; i < 15; i++) {
+//   sum += i 
+// }
+// console.log(sum) 
+
+// R: aparece 105, pois o i, indica quantas vezes o loop tem que rodar, até alcançar a quantidade menor ou = a 15
+
+
+
+// const lista = [10, 11, 12, 15, 18, 19, 21, 23, 25, 27, 30]
+// const novaLista = []
+// const numero = 4
+// for(const item of lista) {
+//   if(item%numero === 0) {
+//     novaLista.push(item)
+//   }
+// }
+// console.log(novaLista)
+
+// a. Faz com que os valores que não tem sobra, sejam empurrados a variavel novaLista
+// b. (4)- indicando a quantidade de informações no array [10, 15, 25, 30]
+// c. (6) [12, 15, 21, 27, 30]
+// numero = 4 - 0 - indica posição, porém não aparece - [12]
+
+//3a.
+// const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+// let maiorNumero = array[0]
+// let menorNumero = array[0]
+
+// for(let i = 0; i < 12; i++){
+//     let elemento = array[i]
+//     if(elemento > maiorNumero){
+//         maiorNumero = elemento
+//     }
+//     if(elemento < menorNumero){
+//         menorNumero = elemento
+//     }
+// }
+
+// console.log("O maior numero é ", maiorNumero);
+// console.log(" O menor numero é ", menorNumero)
+
+//b
+// const array1 = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+// let novoArray = []
+
+// for(let i of array1){ 
+//     novoArray.push(i / 10)
+// }
+// console.log(novoArray)
+
+//c 
+// const array1 = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+// let novoArray = []
+
+// for(let i of array1){ 
+//     if(i%2 === 0){
+//         novoArray.push(i)
+//     }
+// }
+// console.log(novoArray)
+    
+//d
+const array1 = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+
+for(let i = 0; i < array1.length-1; i++){ 
+    console.log("O elemento do " + i + " é " + array1[i])
 }
