@@ -243,8 +243,8 @@
 // console.log(novoArray)
     
 //d
-const array1 = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+// const array1 = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 
-for(let i = 0; i < array1.length-1; i++){ 
-    console.log("O elemento do " + i + " é " + array1[i])
-}
+// for(let i = 0; i < array1.length-1; i++){ 
+//     console.log("O elemento do " + i + " é " + array1[i])
+// }
