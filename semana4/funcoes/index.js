@@ -75,7 +75,7 @@
 // R: quebranozes (método)
 
 //exercício 4
-//a.
+//A.
 // let idadeQuestao = Number(prompt("Qual idade do cachorro?"))
 
 // let idadeCachorro = () => {
@@ -84,21 +84,36 @@
 // }
 // console.log("A idade do dog é ", idadeCachorro(idadeQuestao))
 
+//B.
+
+// let nome = prompt("Qual seu nome?")
+// let idade = Number(prompt("Qual sua idade?"))
+// let end = prompt("Qual seu endereço?")
+// let resposta = prompt("Você é estudante? S / N")
+
+// let fun = () => {
+//     if(resposta === "s"){
+//          resposta = "sou estudante"
+//     }
+//     else{
+//         resposta  = "não sou estudante"
+//     } 
+//     let mensagem = "Eu sou " + nome + " tenho " + idade + " anos, moro em " + end +" e " + resposta
+//     return mensagem
+// }
+// console.log(fun(nome, idade, end, resposta))
+
 //exercicio 5
 
-let nome = prompt("Qual seu nome?")
-let idade = Number(prompt("Qual sua idade?"))
-let end = prompt("Qual seu endereço?")
-let resposta = prompt("Você é estudante? S / N")
+let seculo = (realidade) => {
+    let seculos = ["I","II","III","IV","V","VI","VII","VIII",'IX',"X","XI","XII","XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI"]
+    let arrayAnos = [1, 101, 201, 301, 401, 501, 601, 701, 801, 901, 1001, 1101, 1201, 1301, 1401, 1501, 1601, 1701, 1801, 1901, 2001] 
+    let mensagem = ""
 
-let fun = () => {
-    if(resposta === "s"){
-         resposta = "sou estudante"
+    for(let num = 0; num < arrayAnos.length-1; num++){
+        if(realidade >= arrayAnos[num] && realidade < arrayAnos[num+1]){
+            return mensagem = "O ano é " + realidade + " pertence ao século " + seculos[num] 
+        }
     }
-    else{
-        resposta  = "não sou estudante"
-    } 
-    let mensagem = "Eu sou " + nome + " tenho " + idade + " anos, moro em " + end +" e " + resposta
-    return mensagem
 }
-console.log(fun(nome, idade, end, resposta))
+console.log(seculo(1630))
