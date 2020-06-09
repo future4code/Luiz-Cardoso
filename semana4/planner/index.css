@@ -2,8 +2,13 @@
     margin: 0px;
     padding: 0px;
 }
-body{
+.material-icons{
+    color: white;
+}
 
+i{
+    color: white;
+    font-size: 30px;
 }
 
 h1{
@@ -20,6 +25,7 @@ main{
     font-family: 'Noto Sans JP', sans-serif;
     text-align: center;
 }
+
 label{
     color: white;
     text-align: center;
