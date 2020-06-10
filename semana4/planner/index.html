@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6a04cd1ee5.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <label for="nova-tarefa"> Organização de Tarefas Semanais</label>
+        <input type="text" name="novaTarefa" id="inputTarefa">
+        <select name="diaDaSemana" id="diaDaSemana">
+            <option value="segunda"> Segunda-Feira </option>
+            <option value="terca"> Terça-Feira </option>
+            <option value="quarta"> Quarta-Feira </option>
+            <option value="quinta"> Quinta-Feira </option>
+            <option value="sexta"> Sexta-Feira </option>
+            <option value="sabado"> Sabado </option>
+            <option value="domingo"> Domingo </option>
+        </select>
+        <button onclick="criarTarefa()">
+            <i class="fas fa-atom"></i>
+        </button>
+    </div>
+    <h1 id="titulo">Minha Semana</h1>
+    <main>
+        <div id="segunda"> Segunda
+
+        <ul class="infos"></ul>
+    </div>
+    <div id="terca"> Terça
+
+        <ul class="infos"></ul>
+    </div>
+    <div id="quarta"> Quarta
+
+        <ul class="infos"></ul>
+    </div>
+    <div id="quinta"> Quinta
+
+        <ul class="infos"></ul>
+    </div>
+    <div id="sexta"> Sexta
+
+        <ul class="infos"></ul>
+    </div>
+    <div id="sabado"> Sabado
+
+        <ul class="infos"></ul>
+    </div>
+    <div id="domingo"> Domingo
+
+        <ul class="infos"></ul>
+    </div>
+    </main>
+</body>
+</html>
