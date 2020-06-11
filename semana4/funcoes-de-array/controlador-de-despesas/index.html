@@ -18,10 +18,11 @@
         <section id="box3">
             <label for=""> Tipo(Casa, Viagens, Peão, Outros)</label>
             <select name="" id="meuSelect">
-                <option value="">Casa</option>
-                <option value="">Viagens</option>
-                <option value=""> Peão </option>
-                <option value=""> Outros </option>
+                <option value="vazio"></option>
+                <option value="casa">Casa</option>
+                <option value="viagens">Viagens</option>
+                <option value="peao"> Peão </option>
+                <option value="outros"> Outros </option>
             </select>
         </section>
         <section id="box4">
@@ -29,19 +30,19 @@
             <input type="text" id="inputDescricao">
         </section>
         <section id="box5">
-            <button id="meuBotao1" onclick="limparDespesas()"> Cadastrar Despesas</button>
+            <button id="meuBotao1" onclick="cadastrar()"> Cadastrar Despesas</button>
         </section>
     </article>
     <article>
         <h1>Despesas detalhadas</h1>
-        <h3>Cadastrar Pessoas</h3>
+        <h3>Cadastrar Despesas</h3>
         <section id="box6">
             <label for=""> Tipo de Despesas</label>
             <select name="" id="meuSelect2">
-                <option value="">Casa</option>
-                <option value="">Viagens</option>
-                <option value=""> Peão </option>
-                <option value=""> Outros </option>
+                <option value="casa">Casa</option>
+                <option value="viagens">Viagens</option>
+                <option value="peao"> Peão </option>
+                <option value="outros"> Outros </option>
             </select>
         </section>
         <section id="box7">
@@ -51,6 +52,10 @@
         <section>
             <label for=""> Valor Máximo</label>
             <input type="number" id="meuInput3">
+
+            <div id="lista-despesa">
+                
+            </div>
         </section>
         <section id="box8">
             <button id="buttonFiltro" onclick="filtrar()"> Filtrar </button>
