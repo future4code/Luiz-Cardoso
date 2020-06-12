@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Despesas</title>
+</head>
+<body>
+    <article id="box1">
+        <h1>Controlador de Despesas</h1>
+        <h3>Cadastrar Pessoas</h3>
+        <section id="box2">
+            <label for=""> Valor </label>
+            <input type="number" id="meuInput1">
+        </section>
+        <section id="box3">
+            <label for=""> Tipo(Casa, Viagens, Peão, Outros)</label>
+            <select name="" id="meuSelect">
+                <option value="vazio"></option>
+                <option value="casa">Casa</option>
+                <option value="viagens">Viagens</option>
+                <option value="peao"> Peão </option>
+                <option value="outros"> Outros </option>
+            </select>
+        </section>
+        <section id="box4">
+            <label for=""> Descrição </label>
+            <input type="text" id="inputDescricao">
+        </section>
+        <section id="box5">
+            <button id="meuBotao1" onclick="cadastrar()"> Cadastrar Despesas</button>
+        </section>
+    </article>
+    <article>
+        <h1>Despesas detalhadas</h1>
+        <h3>Cadastrar Despesas</h3>
+        <section id="box6">
+            <label for=""> Tipo de Despesas</label>
+            <select name="" id="meuSelect2">
+                <option value="casa">Casa</option>
+                <option value="viagens">Viagens</option>
+                <option value="peao"> Peão </option>
+                <option value="outros"> Outros </option>
+            </select>
+        </section>
+        <section id="box7">
+            <label for=""> Valor Minimo </label>
+            <input type="number" id="meuInput2">
+        </section>
+        <section>
+            <label for=""> Valor Máximo</label>
+            <input type="number" id="meuInput3">
+
+            <div id="lista-despesa">
+                
+            </div>
+        </section>
+        <section id="box8">
+            <button id="buttonFiltro" onclick="filtrar()"> Filtrar </button>
+            <button id="buttonLimpar" onclick="cadastrar()"> Limpar Filtros </button>
+    </article>
+    <article id="box9">
+        <h1>Extrato</h1>
+        <h3>Valor Total:</h3>
+    </article>
+
+    <footer></footer>
+    
+</body>
+</html>
