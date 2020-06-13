@@ -58,12 +58,26 @@
     // console.log(i*2)
     // } - não vai funcionar pois falta um incremento, e um valor pra variável. Falta o incremento de i++, para adicionar à i, mais 1 a cada loop que fizer
 
-    const quantidadeDeNumerosPares = 5
+    // const quantidadeDeNumerosPares = 5
 
-    let i = 0
+    // let i = 0
 
-    while(i < quantidadeDeNumerosPares) {
-        console.log(i*2)
-        i++
-    }
+    // while(i < quantidadeDeNumerosPares) {
+    //     console.log(i*2)
+    //     i++
+    // }
     
+    // exercicio 4
+
+    function trigronometria(a, b, c){
+        if((a === b) && (b === c)){
+            console.log("Equilatero")
+        } 
+        else if((a !== b) && (b !== c)){
+            console.log("Escaleno")
+        }
+        else{
+            console.log("Isósceles")
+        }
+    }
+    trigronometria(5, 5, 2)
