@@ -82,29 +82,121 @@
     // }
     // trigronometria(5, 5, 2)
 
-    //4.
+//     //5.
     
-    function numeroVerificado(numero1, numero2){
-        if(numero1 > numero2){
-            console.log(`O maior numero é ${numero1}`)
-        }
-        else {
-            console.log(`O menor numero é  ${numero1}`)
-        }
+//     function numeroVerificado(numero1, numero2){
+//         if(numero1 > numero2){
+//             console.log(`O maior numero é ${numero1}`)
+//         }
+//         else {
+//             console.log(`O menor numero é  ${numero1}`)
+//         }
 
-        if(numero1 % numero2 === 0){
-            console.log(`${numero1} é divisivel por ${numero2}`)
-        }
-        else{
-            console.log(`${numero1} não é divisivel por ${numero2}`)
-        }
-        if(numero1 < numero2){
-            resultado = numero2 - numero1
-            console.log(`A diferença entre eles é ${resultado}`)
-        } else{
-            resultado = numero1 - numero2
-            console.log(`A diferença entre eles é ${resultado}`)
-        }
-    }
-numeroVerificado(15, 30)
-    
+//         if(numero1 % numero2 === 0){
+//             console.log(`${numero1} é divisivel por ${numero2}`)
+//         }
+//         else{
+//             console.log(`${numero1} não é divisivel por ${numero2}`)
+//         }
+//         if(numero1 < numero2){
+//             resultado = numero2 - numero1
+//             console.log(`A diferença entre eles é ${resultado}`)
+//         } else{
+//             resultado = numero1 - numero2
+//             console.log(`A diferença entre eles é ${resultado}`)
+//         }
+//     }
+// numeroVerificado(15, 30)
+
+// EXERCICIO DE FUNÇÕES
+
+//1.
+
+// const numeros = [50, 28, 40, 89, -50, -14, 80, 100, 150, 70]
+
+// function selectNum(array){
+//     let numero1 = Infinity 
+//     let numero2 = 0
+
+//     for(let numero of array){
+//         if(numero < numero1){
+//             numero1 = numero 
+//         }
+//         if(numero > numero2){
+//             numero2 = numero
+//     }
+// }
+
+//     array = array.filter((p, i, a) => {
+//         return p !== numero1
+//     })
+
+//     array = array.filter((p, i, a) => {
+//         return p !== numero2
+//     })
+
+//     numero1 = Infinity 
+//     numero2 = 0
+
+//     for(let numero of array){
+//         if(numero < numero1){
+//             numero1 = numero 
+//         }
+//         if(numero > numero2){
+//             numero2 = numero
+//         }
+//     }
+//     console.log("O segundo menor numero é ",numero1,"O segundo maior numero é ", numero2)
+// }
+// selectNum(numeros)
+
+//2.
+// let sayHello = () => {
+//     alert("Hello LabenU")
+// }
+
+// sayHello()
+
+// function criaRetangulo(lado1, lado2){
+//     return {
+//         largura: lado1,
+//         altura: lado2,
+//         perimetro: 2 * (lado1 + lado2),
+//         area: (lado1*lado2)
+//     }
+// }
+
+// console.log(criaRetangulo(10,20))
+
+//3. 
+// let filmeFavorito = {
+//     titulo: "Velozes e Furiosos",
+//     ano: "2001",
+//     diretor: "Justin Lin",
+//     atores: ["Vin Diesel", " Michelle Rodriguez", " Jordana Brewster", " Tyrese Gibson", " Paul Walker"]
+// }
+
+// console.log(`Venha assistir ao filme ${filmeFavorito.titulo}, de ano ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor} e estrelado por ${filmeFavorito.atores}`)
+
+//4. 
+
+let nome = prompt("qual seu nome?")
+let idade = Number(prompt("qual sua idade?"))
+let email = prompt("qual seu email?")
+let endereco = prompt("qual seu endereço?")
+
+let pessoa = {
+    nome: nome,
+    idade: idade,
+    email: email,
+    endereco: endereco
+}
+
+let anonimizarPessoa = (a) => {
+    a.nome = "Anonimo"
+}
+
+anonimizarPessoa(pessoa)
+
+console.log(pessoa)
+
