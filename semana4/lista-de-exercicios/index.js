@@ -69,15 +69,42 @@
     
     // exercicio 4
 
-    function trigronometria(a, b, c){
-        if((a === b) && (b === c)){
-            console.log("Equilatero")
-        } 
-        else if((a !== b) && (b !== c)){
-            console.log("Escaleno")
+    // function trigronometria(a, b, c){
+    //     if((a === b) && (b === c)){
+    //         console.log("Equilatero")
+    //     } 
+    //     else if((a !== b) && (b !== c)){
+    //         console.log("Escaleno")
+    //     }
+    //     else{
+    //         console.log("Isósceles")
+    //     }
+    // }
+    // trigronometria(5, 5, 2)
+
+    //4.
+    
+    function numeroVerificado(numero1, numero2){
+        if(numero1 > numero2){
+            console.log(`O maior numero é ${numero1}`)
+        }
+        else {
+            console.log(`O menor numero é  ${numero1}`)
+        }
+
+        if(numero1 % numero2 === 0){
+            console.log(`${numero1} é divisivel por ${numero2}`)
         }
         else{
-            console.log("Isósceles")
+            console.log(`${numero1} não é divisivel por ${numero2}`)
+        }
+        if(numero1 < numero2){
+            resultado = numero2 - numero1
+            console.log(`A diferença entre eles é ${resultado}`)
+        } else{
+            resultado = numero1 - numero2
+            console.log(`A diferença entre eles é ${resultado}`)
         }
     }
-    trigronometria(5, 5, 2)
+numeroVerificado(15, 30)
+    
