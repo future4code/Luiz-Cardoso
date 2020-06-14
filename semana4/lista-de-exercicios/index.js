@@ -180,23 +180,150 @@
 
 //4. 
 
-let nome = prompt("qual seu nome?")
-let idade = Number(prompt("qual sua idade?"))
-let email = prompt("qual seu email?")
-let endereco = prompt("qual seu endereço?")
+// let nome = prompt("qual seu nome?")
+// let idade = Number(prompt("qual sua idade?"))
+// let email = prompt("qual seu email?")
+// let endereco = prompt("qual seu endereço?")
 
-let pessoa = {
-    nome: nome,
-    idade: idade,
-    email: email,
-    endereco: endereco
-}
+// let pessoa = {
+//     nome: nome,
+//     idade: idade,
+//     email: email,
+//     endereco: endereco
+// }
 
-let anonimizarPessoa = (a) => {
-    a.nome = "Anonimo"
-}
+// let anonimizarPessoa = (a) => {
+//     let novoObjeto ={ 
+//         ...pessoa,
+//         nome: "Anonimo"
+//     }
+//     return novoObjeto
+// }
 
-anonimizarPessoa(pessoa)
+// anonimizarPessoa(pessoa)
 
-console.log(pessoa)
+// console.log(pessoa)
 
+//FUNÇÕES DE ARRAY
+
+
+// let pessoas = [
+// 	{ nome: "Pedro", idade: 20 },
+// 	{ nome: "João", idade: 10 },
+// 	{ nome: "Paula", idade: 12 },
+// 	{ nome: "Artur", idade: 89 } 
+// ]
+//a
+// let retornaPessoaAdulta = (a) => {
+//         a = a.filter((p, i, arr) => {
+//         return p.idade >= 20
+//     })  
+//     return a
+// }
+// console.log(retornaPessoaAdulta(pessoas))
+
+//b.
+// let retornaPessoaMenor = (a) => {
+//         a = a.filter((p, i, arr) => {
+//         return p.idade < 20
+//     })    
+//     return a
+
+// }
+// console.log(retornaPessoaMenor(pessoas))
+
+//2.
+// const array = [1, 2, 3, 4, 5, 6]
+//a.
+
+// function multiplicarPorDois(a){
+//     a = array.map((e, i, arr) => {
+//     e *= 2
+//     return e
+// })
+//     return a
+// }
+// console.log(multiplicarPorDois(array))
+
+//b.
+// function multiplicarPorTres(a){
+//     a = array.map((e, i, arr) => {
+//     e *= 3
+//     return "" + e
+// })
+//     return a
+// }
+// console.log(multiplicarPorTres(array))
+
+//c. 
+
+// function parImpar(a) {
+//     let mensagem = ""
+
+//     a = array.map((e, i, arr) => {
+//         if(e % 2 === 0){
+//            return mensagem = e + " é par"
+//         }else{
+//             return mensagem = e + " é impar"
+//         }
+//     })
+//     return a
+// }
+// console.log(parImpar(array))
+
+//3. 
+const pessoas = [
+	{ nome: "Paula", idade: 12, altura: 1.8},
+	{ nome: "João", idade: 20, altura: 1.3},
+	{ nome: "Pedro", idade: 15, altura: 1.9},
+	{ nome: "Luciano", idade: 22, altura: 1.8},
+	{ nome: "Artur", idade: 10, altura: 1.2},
+	{ nome: "Soter", idade: 70, altura: 1.9}
+]
+// a.
+// function selecionarPessoa(a){
+//     a = a.filter((e, i, arr) =>{
+//         return e.altura >= 1.5
+//     })
+//     a = a.filter((e, i, arr) => {
+//         return e.idade >= 14 && e.idade <= 60
+//     })
+
+//     return a
+// }
+// console.log(selecionarPessoa(pessoas))
+
+//b.
+// function selecionarPessoa(a){
+//     a = a.filter((e, i, arr) =>{
+//         if(e.altura < 1.5 || e.idade < 14 || e.idade > 60){
+//             return true
+//         }
+//     })   
+//     return a
+// }
+// console.log(selecionarPessoa(pessoas))
+
+//4. 
+const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+const emails = []
+
+
+    consultas.forEach((e, i, arr) =>{
+        if(e.genero === "feminino" && e.cancelada === false){
+            emails.push(`Olá, Sra. ${e.nome}. Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${e.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`)
+        }else if(e.genero === "masculino" && e.cancelada === false){
+            emails.push(`Olá, Sr. ${e.nome}. Estamos enviando esta mensagem para lembrá-la da sua consulta no dia ${e.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`)
+        }else if(e.genero === "feminino" && e.cancelada === true){
+            emails.push(`Olá, Sra. ${e.nome}. Infelizmente, sua consulta marcad para o dia ${e.dataDaConsulta} foi cancelada. Se quiser, pode entrar em  contato conosco para remarcá-la`)
+        }else if (e.genero === "masculino" && e.cancelada === true){
+            emails.push(`Olá, Sr.${e.nome}. Infelizmente, sua consulta marcada para o dia ${e.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`)
+        }
+    }) 
+console.log(emails)
