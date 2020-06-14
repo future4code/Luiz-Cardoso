@@ -272,14 +272,14 @@
 // console.log(parImpar(array))
 
 //3. 
-const pessoas = [
-	{ nome: "Paula", idade: 12, altura: 1.8},
-	{ nome: "João", idade: 20, altura: 1.3},
-	{ nome: "Pedro", idade: 15, altura: 1.9},
-	{ nome: "Luciano", idade: 22, altura: 1.8},
-	{ nome: "Artur", idade: 10, altura: 1.2},
-	{ nome: "Soter", idade: 70, altura: 1.9}
-]
+// const pessoas = [
+// 	{ nome: "Paula", idade: 12, altura: 1.8},
+// 	{ nome: "João", idade: 20, altura: 1.3},
+// 	{ nome: "Pedro", idade: 15, altura: 1.9},
+// 	{ nome: "Luciano", idade: 22, altura: 1.8},
+// 	{ nome: "Artur", idade: 10, altura: 1.2},
+// 	{ nome: "Soter", idade: 70, altura: 1.9}
+// ]
 // a.
 // function selecionarPessoa(a){
 //     a = a.filter((e, i, arr) =>{
@@ -305,25 +305,50 @@ const pessoas = [
 // console.log(selecionarPessoa(pessoas))
 
 //4. 
-const consultas = [
-	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
-	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
-	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
-	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+// const consultas = [
+// 	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+// 	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+// 	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+// 	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+// ]
+
+// const emails = []
+
+
+//     consultas.forEach((e, i, arr) =>{
+//         if(e.genero === "feminino" && e.cancelada === false){
+//             emails.push(`Olá, Sra. ${e.nome}. Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${e.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`)
+//         }else if(e.genero === "masculino" && e.cancelada === false){
+//             emails.push(`Olá, Sr. ${e.nome}. Estamos enviando esta mensagem para lembrá-la da sua consulta no dia ${e.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`)
+//         }else if(e.genero === "feminino" && e.cancelada === true){
+//             emails.push(`Olá, Sra. ${e.nome}. Infelizmente, sua consulta marcad para o dia ${e.dataDaConsulta} foi cancelada. Se quiser, pode entrar em  contato conosco para remarcá-la`)
+//         }else if (e.genero === "masculino" && e.cancelada === true){
+//             emails.push(`Olá, Sr.${e.nome}. Infelizmente, sua consulta marcada para o dia ${e.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`)
+//         }
+//     }) 
+// console.log(emails)
+
+//5. 
+
+const contas = [
+	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
 ]
 
-const emails = []
+function atualizaSaldo(){
+    let atualiza = contas.forEach((e, i, arr)=>{
+        let c = 0
 
-
-    consultas.forEach((e, i, arr) =>{
-        if(e.genero === "feminino" && e.cancelada === false){
-            emails.push(`Olá, Sra. ${e.nome}. Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${e.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`)
-        }else if(e.genero === "masculino" && e.cancelada === false){
-            emails.push(`Olá, Sr. ${e.nome}. Estamos enviando esta mensagem para lembrá-la da sua consulta no dia ${e.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`)
-        }else if(e.genero === "feminino" && e.cancelada === true){
-            emails.push(`Olá, Sra. ${e.nome}. Infelizmente, sua consulta marcad para o dia ${e.dataDaConsulta} foi cancelada. Se quiser, pode entrar em  contato conosco para remarcá-la`)
-        }else if (e.genero === "masculino" && e.cancelada === true){
-            emails.push(`Olá, Sr.${e.nome}. Infelizmente, sua consulta marcada para o dia ${e.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`)
+        for(let i of e.compras){
+            c += i
         }
-    }) 
-console.log(emails)
+        e.saldoTotal = e.saldoTotal - c
+        c = 0 
+    })
+    return contas
+}
+console.log(atualizaSaldo(contas))
