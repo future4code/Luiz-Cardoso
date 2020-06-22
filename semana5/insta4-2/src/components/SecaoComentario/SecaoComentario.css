@@ -1,0 +1,15 @@
+.comment-container {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.input-comentario {
+    width: 75%;
+    margin-right: 10px;
+}
+
+.pInput{
+    display: flex;
+}
