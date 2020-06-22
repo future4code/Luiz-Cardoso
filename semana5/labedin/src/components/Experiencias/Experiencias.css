@@ -1,0 +1,10 @@
+.experiencias {
+    display: flex;
+    align-items: center;
+    border: 1px dashed black;
+    padding: 50px 30px;
+    margin-bottom: 50px;
+    height: 100px;
+    width: 40vw;
+    text-align: center;
+}
