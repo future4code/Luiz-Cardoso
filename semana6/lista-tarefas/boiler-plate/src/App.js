@@ -20,17 +20,7 @@ const InputsContainer = styled.div`
 
 class App extends React.Component {
     state = {
-      tarefas: [
-        {
-        id: Date.now(), // Explicação abaixo
-        texto: 'Texto da tarefa',
-        completa: true // Indica se a tarefa está completa (true ou false)
-      },
-      {
-        id: Date.now(), 
-        texto: 'Texto da tarefa',
-        completa: false 
-      }],
+      tarefas: [],
       inputValue: '',
       filter: ''
     }
