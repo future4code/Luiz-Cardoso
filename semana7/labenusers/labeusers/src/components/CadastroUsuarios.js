@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components'
 
 
 class CadastroUsuarios extends React.Component {
@@ -32,7 +33,8 @@ class CadastroUsuarios extends React.Component {
                 Authorization: "luiz-bombonatti-turing"
             }
         }).then(response => {
-            this.setState({inputNome: '', inputEmail: ''})
+            this.setState({inputNome: '', inputEmail: '',})
+            alert("Usuario criado com sucesso!")
         }).catch(error => {
             console.log(error.data)
         })
@@ -45,6 +47,7 @@ class CadastroUsuarios extends React.Component {
             }
         }).then(response => {
             this.pegaUsuario();
+            alert("Usuario deletado com sucesso")
         }).catch(error => {
             console.log(error.data)
         })
