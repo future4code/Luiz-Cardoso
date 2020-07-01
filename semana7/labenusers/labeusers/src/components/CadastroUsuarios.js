@@ -2,24 +2,22 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components'
 
+const ContainerBody = styled.div`
+margin: 0 auto;
+height: 30px;
+`
+const ContainerMedio = styled.div`
+display: flex;
+`
+
+const Salvar = styled.div`
+`
+
 
 class CadastroUsuarios extends React.Component {
     state = {
-        nomesCriados: [],
         inputNome: "",
         inputEmail: ""
-    }
-
-    pegaUsuario = () =>{
-        axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users", {
-            headers: {
-                Authorization: "luiz-bombonatti-turing"
-            }
-        }).then(response => {
-            this.setState({nomesCriados: response.data})
-        }).catch(error =>{
-            console.log(error.data)
-        })
     }
 
     criarUsuario = () => {
@@ -32,22 +30,9 @@ class CadastroUsuarios extends React.Component {
             headers: {
                 Authorization: "luiz-bombonatti-turing"
             }
-        }).then(response => {
+        }).then(() => {
             this.setState({inputNome: '', inputEmail: '',})
             alert("Usuario criado com sucesso!")
-        }).catch(error => {
-            console.log(error.data)
-        })
-    }
-
-    apagaUser = (userId) => {
-        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${userId}`, {
-            headers: {
-                Authorization: "luiz-bombonatti-turing"
-            }
-        }).then(response => {
-            this.pegaUsuario();
-            alert("Usuario deletado com sucesso")
         }).catch(error => {
             console.log(error.data)
         })
@@ -63,35 +48,29 @@ class CadastroUsuarios extends React.Component {
 
   render(){
     return (
-      <div >
-        <div>
-            <button onClick={this.pegaUsuario}>Ir para página de lista</button>
-            <div>
-                <label>Nome:</label>
+      <ContainerMedio >
+            <ContainerBody>
+                <label>Nome: </label>
                 <input 
+                    type="text"
                     value={this.state.inputNome}
                     onChange={this.onChangeNomeValue}
-            />
-            </div>
-            <div>
-                <label>Email:</label>
+                    placeholder="Nome do Usuario"
+                />
+            </ContainerBody>
+            <ContainerBody>
+                <label>Email: </label>
                 <input 
+                    type="text"
                     value={this.state.inputEmail}
                     onChange={this.onChangeEmailValue}
+                    placeholder="Endereço de Email"
                 />
-                <div>
+                <Salvar>
                     <button onClick={this.criarUsuario}> Salvar </button>
-                    {this.state.nomesCriados.map(list => {
-                        return <p>
-                            {list.name}
-                            <button onClick={() => this.apagaUser(list.id)}>Delete </button>
-                        </p>
-                        
-                    })}
-                </div>
-            </div>
-        </div>
-      </div>
+                </Salvar>
+            </ContainerBody>
+      </ContainerMedio>
     );
   }
 }
