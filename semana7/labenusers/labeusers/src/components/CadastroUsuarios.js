@@ -3,16 +3,41 @@ import axios from 'axios';
 import styled from 'styled-components'
 
 const ContainerBody = styled.div`
+display: flex;
+flex-direction: column;
+padding: 30px;
 margin: 0 auto;
-height: 30px;
+justify-content: space-between;
 `
+
+
 const ContainerMedio = styled.div`
 display: flex;
+border: 1px solid black;
+height: 20vh;
+width: 20vw;
+margin: 0 auto; 
+background-color: #263300;
 `
 
-const Salvar = styled.div`
+const InputName = styled.input`
+height: 30px;
+width: 200px;
+margin: 4px;
 `
 
+const InputEmail= styled.input`
+height: 30px;
+width: 200px;
+margin: 4px;
+`
+
+const ButtonSave = styled.button`
+background-color: green;
+border-radius: 10px;
+margin: 10px;
+padding: 2px;
+`
 
 class CadastroUsuarios extends React.Component {
     state = {
@@ -48,27 +73,23 @@ class CadastroUsuarios extends React.Component {
 
   render(){
     return (
-      <ContainerMedio >
+      <ContainerMedio>
             <ContainerBody>
                 <label>Nome: </label>
-                <input 
+                <InputName 
                     type="text"
                     value={this.state.inputNome}
                     onChange={this.onChangeNomeValue}
                     placeholder="Nome do Usuario"
                 />
-            </ContainerBody>
-            <ContainerBody>
                 <label>Email: </label>
-                <input 
+                <InputEmail 
                     type="text"
                     value={this.state.inputEmail}
                     onChange={this.onChangeEmailValue}
                     placeholder="Endereço de Email"
                 />
-                <Salvar>
-                    <button onClick={this.criarUsuario}> Salvar </button>
-                </Salvar>
+                    <ButtonSave onClick={this.criarUsuario}> Salvar </ButtonSave>
             </ContainerBody>
       </ContainerMedio>
     );

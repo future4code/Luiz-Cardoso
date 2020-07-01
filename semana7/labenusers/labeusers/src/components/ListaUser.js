@@ -6,6 +6,11 @@ const ApagaUser = styled.button`
 color: red;
 `
 
+const ContainerCorpo = styled.div`
+border: 1px black solid;
+`
+
+
 const axiosConfig = {
   headers: {
     Authorization: "luiz-bombonatti-turing"
@@ -44,7 +49,7 @@ class ListaUserPage extends React.Component {
     render(){
 
     return (
-      <div>
+      <ContainerCorpo>
         <h3>Usuarios Salvos:</h3>
         {this.state.listaUser.length === 0 && <div>Carregando...</div>}
         {this.state.listaUser.map(user =>{
@@ -53,7 +58,7 @@ class ListaUserPage extends React.Component {
             <ApagaUser onClick={() => {this.apagaUsuario(user.id)}}>X</ApagaUser>
           </ul>
         })}
-      </div>  
+      </ContainerCorpo>  
     );
   }
 }

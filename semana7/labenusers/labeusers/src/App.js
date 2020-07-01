@@ -4,15 +4,18 @@ import ListaUser from './components/ListaUser.js';
 import styled from "styled-components"
 
 const ContainerFather = styled.div`
-height: 50vh;
-width: 50%;
+height: 100vh;
+width: 100%;
 margin: 0 auto;
-display:flex;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: #0E8696;
 `
-
-const MudarPage = styled.div`
-margin: 8px;
-padding: 0px;
+const ButtonPage = styled.button`
+border-radius: 5px;
+background-color: #0D188C;
 `
 
 class App extends React.Component {
@@ -32,10 +35,10 @@ class App extends React.Component {
     const page = this.state.currentPage === "cadastroUsuarios" ? <CadastroUsuarios /> : <ListaUser />
     return (
       <ContainerFather> 
-        <MudarPage>
-        <button onClick={this.changePage}>Trocar de página</button>
-        </MudarPage>
+        <div>
+        <ButtonPage onClick={this.changePage}>Trocar de página</ButtonPage>
         {page}
+        </div>
       </ContainerFather>  
     );
   }
