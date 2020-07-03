@@ -10,16 +10,7 @@ const axiosConfig = {
 
 class PagePlaylists extends React.Component {
     state = {
-        playlistCriadas: [
-            {
-                id: "1",
-                name: "lubezinho"
-            },
-            {
-                id: "2",
-                name: "xarabalas"
-            }
-        ]
+        playlistCriadas: []
     }
 
     componentDidMount = () => {
@@ -30,22 +21,35 @@ class PagePlaylists extends React.Component {
         axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists", axiosConfig)
         .then(response => {
             console.log(response.data)
-            this.setState({playlistCriadas: response.data})
+            this.setState({playlistCriadas: response.data.result.list})
         }).catch(err => {
             console.log(err.message)
         })
     }
-  
+    
+    excluiPlaylist = (userId) => {
+        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${userId}`, 
+        axiosConfig
+        ).then(() => {
+            alert("Usuário deletado")
+            this.mostrarPlaylist()
+        }).catch(e => {
+            console.log(e.message)
+        })
+    }
+
   render() {
     return (
       <div className="App">
         <p> Listas que você criou: </p>
         <hr />
         {this.state.playlistCriadas.map(playlist => {
-            return <ul>
-                <li key={playlist.id}> {playlist.name} </li>
-                <button>Excluir playlist</button>
+            return (
+                <ul>
+                <li key={playlist.id}> {playlist.name   } </li>
+                <button onClick={() => {this.excluiPlaylist(playlist.id)}}>Excluir playlist</button>
             </ul>
+            ) 
         })}
       </div>
     );
