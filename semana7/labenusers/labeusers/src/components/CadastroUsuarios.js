@@ -2,24 +2,47 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components'
 
+const ContainerBody = styled.div`
+display: flex;
+flex-direction: column;
+padding: 30px;
+margin: 0 auto;
+justify-content: space-between;
+`
+
+
+const ContainerMedio = styled.div`
+display: flex;
+border: 1px solid black;
+height: 20vh;
+width: 20vw;
+margin: 0 auto; 
+background-color: #263300;
+`
+
+const InputName = styled.input`
+height: 30px;
+width: 200px;
+margin: 4px;
+`
+
+const InputEmail= styled.input`
+height: 30px;
+width: 200px;
+margin: 4px;
+`
+
+const ButtonSave = styled.button`
+background-color: green;
+border-radius: 10px;
+margin: 10px;
+padding: 2px;
+`
 
 class CadastroUsuarios extends React.Component {
     state = {
-        nomesCriados: [],
         inputNome: "",
         inputEmail: ""
-    }
-
-    pegaUsuario = () =>{
-        axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users", {
-            headers: {
-                Authorization: "luiz-bombonatti-turing"
-            }
-        }).then(response => {
-            this.setState({nomesCriados: response.data})
-        }).catch(error =>{
-            console.log(error.data)
-        })
     }
 
     criarUsuario = () => {
@@ -32,22 +55,9 @@ class CadastroUsuarios extends React.Component {
             headers: {
                 Authorization: "luiz-bombonatti-turing"
             }
-        }).then(response => {
+        }).then(() => {
             this.setState({inputNome: '', inputEmail: '',})
             alert("Usuario criado com sucesso!")
-        }).catch(error => {
-            console.log(error.data)
-        })
-    }
-
-    apagaUser = (userId) => {
-        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${userId}`, {
-            headers: {
-                Authorization: "luiz-bombonatti-turing"
-            }
-        }).then(response => {
-            this.pegaUsuario();
-            alert("Usuario deletado com sucesso")
         }).catch(error => {
             console.log(error.data)
         })
@@ -63,35 +73,25 @@ class CadastroUsuarios extends React.Component {
 
   render(){
     return (
-      <div >
-        <div>
-            <button onClick={this.pegaUsuario}>Ir para página de lista</button>
-            <div>
-                <label>Nome:</label>
-                <input 
+      <ContainerMedio>
+            <ContainerBody>
+                <label>Nome: </label>
+                <InputName 
+                    type="text"
                     value={this.state.inputNome}
                     onChange={this.onChangeNomeValue}
-            />
-            </div>
-            <div>
-                <label>Email:</label>
-                <input 
+                    placeholder="Nome do Usuario"
+                />
+                <label>Email: </label>
+                <InputEmail 
+                    type="text"
                     value={this.state.inputEmail}
                     onChange={this.onChangeEmailValue}
+                    placeholder="Endereço de Email"
                 />
-                <div>
-                    <button onClick={this.criarUsuario}> Salvar </button>
-                    {this.state.nomesCriados.map(list => {
-                        return <p>
-                            {list.name}
-                            <button onClick={() => this.apagaUser(list.id)}>Delete </button>
-                        </p>
-                        
-                    })}
-                </div>
-            </div>
-        </div>
-      </div>
+                    <ButtonSave onClick={this.criarUsuario}> Salvar </ButtonSave>
+            </ContainerBody>
+      </ContainerMedio>
     );
   }
 }
