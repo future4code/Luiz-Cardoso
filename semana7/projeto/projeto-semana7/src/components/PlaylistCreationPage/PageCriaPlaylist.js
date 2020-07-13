@@ -1,7 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import axios from 'axios'
+import axios from 'axios';
 
+const PlaylistFormContainer = styled.div`
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const ContainerUserCreaterName = styled.div`
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+`
 const axiosConfig = {
     headers: {
     Authorization: "luiz-bombonatti-turing"
@@ -35,16 +49,18 @@ class CriaPlaylist extends React.Component {
 
   render() {
     return (
-      <div className="App">
-          <p>Crie sua nova playlist ;)</p>
+      <PlaylistFormContainer>
+          <ContainerUserCreaterName>
+          <h2>Digite o nome de sua nova playlist ;)</h2>
         <input 
             type="text"
             value={this.state.name}
-            placeholder="Crie uma nova playlist"
+            placeholder="Nome da Playlist"
             onChange={this.onChangeNamePlaylist}
         />
         <button onClick={this.createPlaylist}>Criar playlist</button>
-      </div>
+          </ContainerUserCreaterName>
+      </PlaylistFormContainer>
     );
   }
   }
