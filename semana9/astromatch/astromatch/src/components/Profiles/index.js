@@ -98,7 +98,7 @@ export default function Profiles(props) {
 
     axios.post(`${baseUrl}/choose-person`, body)
     .then(() => {
-        alert("Você deu deslike nessa pessoa");
+        alert(`Você deu deslike em ${props.person.name}`);
         props.getPerson();
     }).catch(e => { 
         console.log(e.message)
@@ -113,7 +113,7 @@ export default function Profiles(props) {
 
         axios.post(`${baseUrl}/choose-person`, body)
         .then(() => {
-            alert("Você curtiu essa pessoa");
+            alert(`Você curtiu ${props.person.name}`);
             props.getPerson();
         }).catch(e => { 
             console.log(e.message)
