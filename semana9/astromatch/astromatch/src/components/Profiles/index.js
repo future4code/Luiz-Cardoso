@@ -50,6 +50,8 @@ export default function Profiles(props) {
             <h1>{props.person.bio}</h1>
         </BioPerson>
         </CardPerson>
+        <br />
+        <hr/>
         <ContainerButton>
         <DeslikeButton onClick={ButtonDeslike}>
             <Clear />

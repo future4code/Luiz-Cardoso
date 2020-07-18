@@ -43,7 +43,7 @@ export const ContainerButton = styled.div`
     background-color: white;
     display: flex;
     justify-content: space-around;
-    padding: 60px;
+    padding: 40px;
 ` 
 
 export const LikeButton = styled.button`
