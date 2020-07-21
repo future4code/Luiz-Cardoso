@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import axios from 'axios'
+import axios from 'axios';
+
+
+
+const PagePlaylistContainer = styled.div`
+
+`
 
 const axiosConfig = {
     headers: {
@@ -40,9 +46,10 @@ class PagePlaylists extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <PagePlaylistContainer>
         <p> Listas que você criou: </p>
         <hr />
+        {this.state.playlistCriadas.length === 0 && <div>carregando ...</div>}
         {this.state.playlistCriadas.map(playlist => {
             return (
                 <ul>
@@ -51,7 +58,7 @@ class PagePlaylists extends React.Component {
             </ul>
             ) 
         })}
-      </div>
+      </PagePlaylistContainer>
     );
   }
   }

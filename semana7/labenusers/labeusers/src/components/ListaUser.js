@@ -30,7 +30,7 @@ class ListaUserPage extends React.Component {
     axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
     axiosConfig,
     ).then(response => {
-        this.setState({listaUser: response.data})
+        this.setState({listaUser: response.data.results.list})
     }).catch(error =>{
         console.log(error.data)
     })
