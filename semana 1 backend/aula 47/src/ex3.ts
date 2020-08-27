@@ -2,9 +2,10 @@ import axios from 'axios';
 
 const baseUrl: string = 'https://us-central1-labenu-apis.cloudfunctions.net/labenews'
 
-//a. O que muda pra mim é aonde o async entra e na escrita dela! Na função
-//nomeada assincrona, o async vai no começo da função para indicar assincronicidade
-//já na arrow function não é necessário indicar no começo. 
+//a. Não, pois a promisse receberá a tipagem do usuário
+//b. A promisse é o resultado de uma função assincrona, caso não tenha indicado nela o que ela tem que retornar
+//mapeamos esse processo para que possamos decidir o que receberemos.
+
 
 type Subscriber = {
     id: string,

@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "parte1": "tsc && node build/ex1.js",
-    "parte2": "tsc && node build/ex2.js"
+    "parte2": "tsc && node build/ex2.js",
+    "parte3": "tsc && node build/ex3.js",
+    "parte4": "tsc && node build/ex4.js",
+    "parte5": "tsc && node build/ex5.js",
+    "parte6": "tsc && node build/ex6.js",
+    "parte7": "tsc && node build/ex7.js"
   },
   "author": "luiz-bombonatti",
   "license": "ISC"
