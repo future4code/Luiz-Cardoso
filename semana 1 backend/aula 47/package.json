@@ -1,0 +1,14 @@
+{
+  "name": "aula47-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "parte1": "tsc && node build/ex1.js",
+    "parte2": "tsc && node build/ex2.js"
+  },
+  "author": "luiz-bombonatti",
+  "license": "ISC"
+}
+
