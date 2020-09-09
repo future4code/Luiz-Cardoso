@@ -23,10 +23,15 @@ const CreateTripPage = () => {
         history.push('/login')
     };
 
+    const logout = () => {
+        window.localStorage.clear()
+        history.push("/login");
+    }
+
     return (
         <div>
             <div>
-                <button onClick={goToLogin}>Logout</button>
+                <button onClick={logout}>Logout</button>
                 <h1>Create Trip Page</h1>
             </div>
             <ContainerManager>
