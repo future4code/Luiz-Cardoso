@@ -1,0 +1,4 @@
+// exercicio 1 
+// a - Round: Quantidade de interações que serão feitas até ser comprovado que os dados são iguais.
+// Salt - algo gerado após pegar os rounds das variáveis de ambiente
+// valores recomendado para o round é 12, utilizei por ser padrão. 
